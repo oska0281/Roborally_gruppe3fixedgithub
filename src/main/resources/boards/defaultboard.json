@@ -215,6 +215,18 @@
       ],
       "x": 6,
       "y": 2
+    },
+    {
+      "walls": [],
+      "actions": [
+        {
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.controller.Gear",
+          "INSTANCE": {
+          }
+        }
+      ],
+      "x": 4,
+      "y": 1
     }
   ]
 }
