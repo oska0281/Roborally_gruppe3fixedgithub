@@ -109,6 +109,10 @@ public class AppController implements Observer {
         RepositoryAccess.getRepository().updateGameInDB(gameController.board);
     }
 
+
+    /**
+     * @author Oskar Lolk Larsen s215717
+     */
     public void loadGame() {
         List<Integer> gameIds = new ArrayList<>();
         RepositoryAccess.getRepository().getGames().forEach(gameInDB -> gameIds.add(gameInDB.id));
@@ -123,6 +127,10 @@ public class AppController implements Observer {
 
     }
 
+
+    /**
+     * @author Oskar Lolk Larsen s215717
+     */
     private Board initializeBoard(){
         List<String> boards = LoadBoard.getBoards();
         ChoiceDialog<String> dialog = new ChoiceDialog<>(boards.get(0), boards);
