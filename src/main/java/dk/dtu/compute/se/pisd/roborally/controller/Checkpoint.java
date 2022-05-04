@@ -4,6 +4,10 @@ import dk.dtu.compute.se.pisd.roborally.model.Player;
 import dk.dtu.compute.se.pisd.roborally.model.Space;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ * @author Oskar Lolk Larsen s215717
+ */
+
 public class Checkpoint extends FieldAction{
     private int checkpointNumber;
 
