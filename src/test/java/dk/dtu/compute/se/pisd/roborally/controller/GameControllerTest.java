@@ -103,7 +103,7 @@ class GameControllerTest {
                 "Space (0,0) should be empty!");
     }
     /**
-     @author Christoffer Fink s205449
+     @author Oskar Lolk Larsen s215717
      turnRight test
      mod vest, da start pos er SOUTH
      */
@@ -115,7 +115,7 @@ class GameControllerTest {
         Assertions.assertEquals(Heading.WEST, player.getHeading(), "player should be heading WEST");
     }
     /**
-     @author Christoffer Fink s205449
+     @author Oskar Lolk Larsen s215717
      turnLeft test
      mod east ~~~
      */
