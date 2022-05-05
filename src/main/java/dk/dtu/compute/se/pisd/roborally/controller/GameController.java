@@ -330,10 +330,7 @@ public class GameController {
     }
 
     /**
-     * ...
-     *
      * @author Oskar Lolk Larsen,  s215717
-     *
      */
 
     /**
@@ -386,17 +383,28 @@ public class GameController {
         player.setSpace(space);
     }
 
+
+    /**
+     * @author Oskar Lolk Larsen,  s215717
+     * Same function as moveForward, however the method is set two times to get the fastForward function
+     */
     public void fastForward(@NotNull Player player) {
         moveForward(player);
         moveForward(player);
     }
 
+    /**
+     * Here the player's direction is set to turn right
+     */
     public void turnRight(@NotNull Player player) {
         if(player !=null && player.board == board){
             player.setHeading(player.getHeading().next());
         }
     }
 
+    /**
+     * Here the player's direction is set to turn left
+     */
     public void turnLeft(@NotNull Player player) {
         if(player !=null && player.board == board){
             player.setHeading(player.getHeading().prev());
@@ -418,6 +426,10 @@ public class GameController {
         }
     }
 
+
+    /**
+     * Just as in fastForward, but here the moveForward is used one more time to get fasterForward
+     */
     public void fasterForward(@NotNull Player player) {
         moveForward(player);
         moveForward(player);
