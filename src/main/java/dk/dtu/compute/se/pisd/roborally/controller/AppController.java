@@ -112,6 +112,9 @@ public class AppController implements Observer {
 
     /**
      * @author Oskar Lolk Larsen s215717
+     *
+     * this method loads the games from the database and asks the user which of the gameID's they wish to load.
+     * The system then finds the game which has the same gameID as the one requested.
      */
     public void loadGame() {
         List<Integer> gameIds = new ArrayList<>();
@@ -130,6 +133,8 @@ public class AppController implements Observer {
 
     /**
      * @author Oskar Lolk Larsen s215717
+     *
+     * This method checks which boards are available
      */
     private Board initializeBoard(){
         List<String> boards = LoadBoard.getBoards();

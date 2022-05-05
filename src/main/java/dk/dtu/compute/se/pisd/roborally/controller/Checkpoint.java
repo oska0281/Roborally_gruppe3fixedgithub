@@ -6,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Oskar Lolk Larsen s215717
+ *
  */
 
 public class Checkpoint extends FieldAction{
@@ -15,6 +16,12 @@ public class Checkpoint extends FieldAction{
         this.checkpointNumber = checkpointNumber;
     }
 
+
+    /**
+     * This method checks if there is a player located on the space.
+     * If yes then checks if the players total checkpoints is less than the checkpoint number which the player has landed on
+     * If yes then the player is granted a checkpoint number.
+     */
     @Override
     public boolean landedOn(@NotNull GameController gameController, @NotNull Space space) {
         if(space != null){
