@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class GearTest {
+class GearTest {
     private final int TEST_WIDTH = 8;
     private final int TEST_HEIGHT = 8;
 
@@ -44,7 +44,7 @@ public class GearTest {
      * samme som moveforward i princippet med en varriation om man lander på et gear
      */
     @Test
-    void moveForward() {
+    void moveForwardLeftGear() {
         Board board = gameController.board;
         Player current = board.getCurrentPlayer();
         board.getSpace(0,1).addAction(new Gear(Gear.LEFT_TURN));
@@ -52,6 +52,21 @@ public class GearTest {
         board.getSpace(0,1).getActions().get(0).landedOn(gameController, board.getSpace(0,1));
         Assertions.assertEquals(current, board.getSpace(0, 1).getPlayer(), "Player " + current.getName() + " should beSpace (0,1)!");
         Assertions.assertEquals(Heading.EAST, current.getHeading(), "Player 0 should be heading EAST!");
+        Assertions.assertNull(board.getSpace(0, 0).getPlayer(), "Space (0,0) should be empty!");
+    }
+
+    /**
+     * @author Christoffer Fink 205449
+     */
+    @Test
+    void moveForwardRightGear() {
+        Board board = gameController.board;
+        Player current = board.getCurrentPlayer();
+        board.getSpace(0,1).addAction(new Gear(Gear.RIGHT_TURN));
+        gameController.moveForward(current);
+        board.getSpace(0,1).getActions().get(0).landedOn(gameController, board.getSpace(0,1));
+        Assertions.assertEquals(current, board.getSpace(0, 1).getPlayer(), "Player " + current.getName() + " should beSpace (0,1)!");
+        Assertions.assertEquals(Heading.WEST, current.getHeading(), "Player 0 should be heading WEST!");
         Assertions.assertNull(board.getSpace(0, 0).getPlayer(), "Space (0,0) should be empty!");
     }
 }

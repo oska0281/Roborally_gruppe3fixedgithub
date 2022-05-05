@@ -114,6 +114,7 @@ class GameControllerTest {
         gameController.turnRight(player);
         Assertions.assertEquals(Heading.WEST, player.getHeading(), "player should be heading WEST");
     }
+
     /**
      @author Oskar Lolk Larsen s215717
      turnLeft test
@@ -128,12 +129,19 @@ class GameControllerTest {
 
     }
 
+    /**
+     * @author Christoffer Fink s205449
+     */
+    @Test
+    void uTurn() {
+        Board board = gameController.board;
+        Player player = board.getCurrentPlayer();
+        gameController.uTurn(player);
+        Assertions.assertEquals(Heading.NORTH, player.getHeading(),"player should be heading NORTH" );
+        Assertions.assertEquals(player, board.getSpace(0, 0).getPlayer(),
+                "Player " + player.getName() + "space should be (0,0)");
 
-
-
-
-
-
+    }
 
 }
 
