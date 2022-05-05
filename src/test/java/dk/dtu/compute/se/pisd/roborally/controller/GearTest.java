@@ -14,6 +14,9 @@ public class GearTest {
 
     private GameController gameController;
 
+    /**
+     * @author Christoffer Fink 205449
+     */
     @BeforeEach
     void setUp() {
         Board board = new Board(TEST_WIDTH, TEST_HEIGHT);

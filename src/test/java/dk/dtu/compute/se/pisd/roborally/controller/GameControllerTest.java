@@ -65,6 +65,10 @@ class GameControllerTest {
         Assertions.assertEquals(player2, board.getCurrentPlayer(), "Current player should be " + player2.getName() +"!");
     }
 */
+    /**
+    @author Christoffer Fink s205449
+     moveForward test
+     */
     @Test
     void moveForward() {
         Board board = gameController.board;
@@ -72,11 +76,17 @@ class GameControllerTest {
 
         gameController.moveForward(current);
 
-        Assertions.assertEquals(current, board.getSpace(0, 1).getPlayer(), "Player " + current.getName() + " should beSpace (0,1)!");
-        Assertions.assertEquals(Heading.SOUTH, current.getHeading(), "Player 0 should be heading SOUTH!");
-        Assertions.assertNull(board.getSpace(0, 0).getPlayer(), "Space (0,0) should be empty!");
+        Assertions.assertEquals(current, board.getSpace(0, 1).getPlayer(),
+                "Player " + current.getName() + " should beSpace (0,1)!");
+        Assertions.assertEquals(Heading.SOUTH, current.getHeading(),
+                "Player 0 should be heading SOUTH!");
+        Assertions.assertNull(board.getSpace(0, 0).getPlayer(),
+                "Space (0,0) should be empty!");
     }
-
+    /**
+     @author Christoffer Fink s205449
+     fastForward test
+     */
     @Test
     void fastForward() {
         // samme som moveForward her gøres det bare 2 gange
@@ -85,11 +95,18 @@ class GameControllerTest {
 
         gameController.fastForward(player);
 
-        Assertions.assertEquals(player, board.getSpace(0, 2).getPlayer(), "Player " + player.getName() + " should space be (0,2)!");
-        Assertions.assertEquals(Heading.SOUTH, player.getHeading(), "Player should be heading SOUTH!");
-        Assertions.assertNull(board.getSpace(0, 0).getPlayer(), "Space (0,0) should be empty!");
+        Assertions.assertEquals(player, board.getSpace(0, 2).getPlayer(),
+                "Player " + player.getName() + " should space be (0,2)!");
+        Assertions.assertEquals(Heading.SOUTH, player.getHeading(),
+                "Player should be heading SOUTH!");
+        Assertions.assertNull(board.getSpace(0, 0).getPlayer(),
+                "Space (0,0) should be empty!");
     }
-
+    /**
+     @author Christoffer Fink s205449
+     turnRight test
+     mod vest, da start pos er SOUTH
+     */
     @Test
     void turnRight(){
         Board board = gameController.board;
@@ -97,6 +114,11 @@ class GameControllerTest {
         gameController.turnRight(player);
         Assertions.assertEquals(Heading.WEST, player.getHeading(), "player should be heading WEST");
     }
+    /**
+     @author Christoffer Fink s205449
+     turnLeft test
+     mod east ~~~
+     */
     @Test
     void turnLeft() {
         Board board = gameController.board;
