@@ -89,7 +89,10 @@ public class GameController {
         return new CommandCard(commands[random]);
     }
 
-    // XXX: V2
+
+    /**
+     * This method ends the programming phase, which makes the execute button active to press.
+     */
     public void finishProgrammingPhase() {
         makeProgramFieldsInvisible();
         makeProgramFieldsVisible(0);
@@ -120,7 +123,9 @@ public class GameController {
         }
     }
 
-    // XXX: V2
+    /**
+     * This method executes the moves which the player has requested
+     */
     public void executePrograms() {
         board.setStepMode(false);
         continuePrograms();
