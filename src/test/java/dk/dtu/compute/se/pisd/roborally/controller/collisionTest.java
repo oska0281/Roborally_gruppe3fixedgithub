@@ -37,7 +37,7 @@ class collisionTest {
 }
     /**
      * @author Christoffer Fink s205449
-     * COLLISION TEST
+     * Check if players move each other when bumping into each other
      */
 //
     //@Test
