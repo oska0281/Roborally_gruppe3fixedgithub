@@ -6,6 +6,7 @@ import org.jetbrains.annotations.NotNull;
 
 /**
  * @author Peter Møller s215707
+ *
  */
 public class Gear extends FieldAction{
     public final static int LEFT_TURN = 1;
@@ -16,8 +17,12 @@ public class Gear extends FieldAction{
     public Gear(int directionOfTurn) {
         this.directionOfTurn = directionOfTurn;
     }
-
-
+    /**
+     * This method changes the players heading if a player lands on the field
+     * @param gameController
+     * @param space
+     * @return
+     */
     @Override
     public boolean landedOn(@NotNull GameController gameController, @NotNull Space space) {
         Heading newHeading;
