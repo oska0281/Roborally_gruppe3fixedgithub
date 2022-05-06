@@ -32,8 +32,9 @@ class GearTest {
         gameController = null;
     }
     /**
+     * 1. Test to check if gear turns player
      * @author Christoffer Fink s205499
-     * same as move forward but landing on gear turning left
+     *
      */
     @Test
     void moveForwardLeftGear() {
@@ -48,8 +49,9 @@ class GearTest {
     }
 
     /**
+     * 2. Test to check if gear turns player
      * @author Christoffer Fink 205449
-     * same as before just right turn
+     *
      */
     @Test
     void moveForwardRightGear() {

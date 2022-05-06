@@ -72,6 +72,7 @@ public class Space extends Subject {
     }
 
     /**
+     * This method adds walls as field action
      * @author Christoffer Fink s205449
      * @return
      */

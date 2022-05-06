@@ -102,7 +102,7 @@ public class SpaceView extends StackPane implements ViewObserver {
     }
 
     /**
-     *
+     * Draws the walls aswell as other fieldActions
      * @author Christoffer Fink, s205449
      *
      */

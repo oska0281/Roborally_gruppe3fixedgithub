@@ -35,39 +35,9 @@ class GameControllerTest {
     }
 
     /**
-     * Test for Assignment V1 (can be delete later once V1 was shown to the teacher)
-     */
-
-    /*
-    @Test
-    void testV1() {
-        Board board = gameController.board;
-
-        Player player = board.getCurrentPlayer();
-        gameController.moveCurrentPlayerToSpace(board.getSpace(0, 4));
-
-        Assertions.assertEquals(player, board.getSpace(0, 4).getPlayer(), "Player " + player.getName() + " should beSpace (0,4)!");
-    }
-
-
-        The following tests should be used later for assignment V2
-
-    @Test
-    void moveCurrentPlayerToSpace() {
-        Board board = gameController.board;
-        Player player1 = board.getPlayer(0);
-        Player player2 = board.getPlayer(1);
-
-        gameController.moveCurrentPlayerToSpace(board.getSpace(0, 4));
-
-        Assertions.assertEquals(player1, board.getSpace(0, 4).getPlayer(), "Player " + player1.getName() + " should beSpace (0,4)!");
-        Assertions.assertNull(board.getSpace(0, 0).getPlayer(), "Space (0,0) should be empty!");
-        Assertions.assertEquals(player2, board.getCurrentPlayer(), "Current player should be " + player2.getName() +"!");
-    }
-*/
-    /**
-    @author Christoffer Fink s205449
-     moveForward test
+     * Testing if player moves forward when supposed to
+   * @author Christoffer Fink s205449
+    * Testing if player moves forward when supposed to
      */
     @Test
     void moveForward() {
@@ -84,8 +54,8 @@ class GameControllerTest {
                 "Space (0,0) should be empty!");
     }
     /**
-     @author Christoffer Fink s205449
-     fastForward test
+     * Same as moveForward test just checking if twice
+    * @author Christoffer Fink s205449
      */
     @Test
     void fastForward() {
@@ -103,9 +73,9 @@ class GameControllerTest {
                 "Space (0,0) should be empty!");
     }
     /**
-     @author Oskar Lolk Larsen s215717
-     turnRight test
-     against west, because start pos is SOUTH
+     *@author Oskar Lolk Larsen s215717
+    * turnRight test
+     *against west, because start pos is SOUTH
      */
     @Test
     void turnRight(){
@@ -116,9 +86,9 @@ class GameControllerTest {
     }
 
     /**
-     @author Oskar Lolk Larsen s215717
-     turnLeft test
-     against east ~~~
+     *  turnLeft test
+     *  against east ~~~
+    * @author Oskar Lolk Larsen s215717
      */
     @Test
     void turnLeft() {
@@ -130,7 +100,9 @@ class GameControllerTest {
     }
 
     /**
+     * Testing if the player makes an uturn when supposed to
      * @author Christoffer Fink s205449
+     *
      */
     @Test
     void uTurn() {
