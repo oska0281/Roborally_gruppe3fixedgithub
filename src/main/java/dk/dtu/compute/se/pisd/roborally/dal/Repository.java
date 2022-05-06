@@ -270,15 +270,21 @@ class Repository implements IRepository {
 		rs.close();
 	}
 
-	/**
-	 * @author David Otzen s201386
-	 */
+
 	public static final String CARD_GAME = "game";
 	public static final String CARD_OWNER = "player";
 	public static final String CARD_ID = "id";
 	public static final String CARD_POS = "pos";
 
 	public static final String CARD_PLACE = "place";
+
+	/**
+	 * @author David Otzen s201386
+	 *Game will create cards for a player who doesn't have any
+	 * @param board Board
+	 * @param player Player
+	 * @param number PlayerID
+	 */
 	private void createCommandCardsForOnePlayer(Board board, Player player, int number) throws SQLException{
 		PreparedStatement ps = getSelectCardsStatementU();
 		ps.setInt(1, board.getGameId());
@@ -313,6 +319,14 @@ class Repository implements IRepository {
 		}
 	}
 
+	/**
+	 *
+	 * @author David Otzen s201386
+	 *Loads all the players onto the board in as they were saved.
+	 * @param game Game
+	 * @throws SQLException
+	 */
+
 	private void loadPlayersFromDB(Board game) throws SQLException {
 		PreparedStatement ps = getSelectPlayersASCStatement();
 		ps.setInt(1, game.getGameId());
@@ -344,11 +358,7 @@ class Repository implements IRepository {
 	/**
 	 *
 	 * @author David Otzen s201386
-	 *
-	 * @param board
-	 * @param player
-	 * @param number
-	 * @throws SQLException
+	 *Gives each player their cards as they were saved.
 	 */
 	private void loadCommandCardsForOnePlayer(Board board, Player player, int number) throws SQLException{
 		PreparedStatement ps = getSelectCardsStatementU();
@@ -369,6 +379,13 @@ class Repository implements IRepository {
 			}
 		}
 	}
+
+	/**
+	 *
+	 * @author David Otzen s201386
+	 *Loads all the players onto the board in as they were saved.
+	 * @param game Game
+	 */
 
 	private void updatePlayersInDB(Board game) throws SQLException {
 		PreparedStatement ps = getSelectPlayersStatementU();
@@ -392,10 +409,7 @@ class Repository implements IRepository {
 
 	/**
 	 * @author David Otzen s201386
-	 * @param board
-	 * @param player
-	 * @param number
-	 * @throws SQLException
+	 * Updates cards for each player to make sure they're up to date.
 	 */
 	private void updateCardsForEachPlayerInDB(Board board, Player player, int number) throws SQLException{
 		PreparedStatement ps = getSelectCardsStatementU();
