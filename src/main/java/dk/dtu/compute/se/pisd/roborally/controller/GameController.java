@@ -191,8 +191,10 @@ public class GameController {
     }
 
 
-
-
+    /**
+     *
+     * @David Otzen s201386
+     */
     public void executeCommandOptionAndContinue(@NotNull Command option){
         Player currentPlayer = board.getCurrentPlayer();
         if(currentPlayer != null &&
@@ -410,14 +412,16 @@ public class GameController {
             player.setHeading(player.getHeading().prev());
         }
     }
-    /**@author Peter Møller*/
+    /**@author Peter Møller s215707
+     * */
     public void uTurn(@NotNull Player player) {
         if(player !=null && player.board == board){
             player.setHeading(player.getHeading().next().next());
         }
     }
 
-    /**@author Peter Møller*/
+    /**@author Peter Møller s215707
+     * */
     public void backUp(@NotNull Player player) {
         if(player !=null && player.board == board){
             uTurn(player);
@@ -427,7 +431,7 @@ public class GameController {
     }
 
 
-    /**
+    /**@author Peter Møller s215707
      * Just as in fastForward, but here the moveForward is used one more time to get fasterForward
      */
     public void fasterForward(@NotNull Player player) {

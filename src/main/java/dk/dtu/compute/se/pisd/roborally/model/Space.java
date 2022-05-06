@@ -36,12 +36,6 @@ import java.util.List;
 public class Space extends Subject {
 
     private Player player;
-    /**
-     * ...
-     *
-     * @author Christoffer Fink, s205449
-     *
-     */
     private List<Heading> walls = new ArrayList<>();
     private List<FieldAction> actions = new ArrayList<>();
 

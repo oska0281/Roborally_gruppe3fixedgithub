@@ -5,6 +5,9 @@ import dk.dtu.compute.se.pisd.roborally.model.Player;
 import dk.dtu.compute.se.pisd.roborally.model.Space;
 import org.jetbrains.annotations.NotNull;
 
+/**Ahmed Nassaralha s215702
+ *
+ */
 public class ConveyorBelt extends FieldAction{
     Heading heading;
 

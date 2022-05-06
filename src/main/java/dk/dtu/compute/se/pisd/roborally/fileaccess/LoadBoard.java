@@ -46,7 +46,9 @@ import java.util.stream.Stream;
  * @author Ekkart Kindler, ekki@dtu.dk
  */
 public class LoadBoard {
-
+    /**
+     * @author Ahmed Nassaralha s215702
+     */
     private static final String BOARDSFOLDER = "boards";
     private static final String DEFAULTBOARD = "defaultboard";
     private static final String[] BOARDS = new String[]{"defaultboard", "racetrack(2 players)"};

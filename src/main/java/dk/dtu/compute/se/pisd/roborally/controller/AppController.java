@@ -94,21 +94,12 @@ public class AppController implements Observer {
             }
             board.setCurrentPlayer(board.getPlayer(0));
 
-            /**
-            * @author Christoffer Fink s205449
-            */
             gameController.startProgrammingPhase();
-
 
             roboRally.createBoardView(gameController);
             RepositoryAccess.getRepository().createGameInDB(board);
         }
     }
-
-    public void saveGame() {
-        RepositoryAccess.getRepository().updateGameInDB(gameController.board);
-    }
-
 
     /**
      * @author Oskar Lolk Larsen s215717
@@ -116,6 +107,11 @@ public class AppController implements Observer {
      * this method loads the games from the database and asks the user which of the gameID's they wish to load.
      * The system then finds the game which has the same gameID as the one requested.
      */
+    public void saveGame() {
+        RepositoryAccess.getRepository().updateGameInDB(gameController.board);
+    }
+
+
     public void loadGame() {
         List<Integer> gameIds = new ArrayList<>();
         RepositoryAccess.getRepository().getGames().forEach(gameInDB -> gameIds.add(gameInDB.id));
@@ -192,7 +188,10 @@ public class AppController implements Observer {
         return gameController != null;
     }
 
-
+    /**
+     *
+     * @author Christoffer Fink s205449
+     */
     @Override
     public void update(Subject subject) {
         if(subject.getClass() == Board.class){

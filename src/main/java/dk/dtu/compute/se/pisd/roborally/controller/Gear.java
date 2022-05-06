@@ -4,6 +4,9 @@ import dk.dtu.compute.se.pisd.roborally.model.Heading;
 import dk.dtu.compute.se.pisd.roborally.model.Space;
 import org.jetbrains.annotations.NotNull;
 
+/**
+ *@author Peter Møller s215707
+ */
 public class Gear extends FieldAction{
     public final static int LEFT_TURN = 1;
     public final static int RIGHT_TURN = -1;

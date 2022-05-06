@@ -38,7 +38,9 @@ public class Player extends Subject {
     final public static int NO_CARDS = 8;
 
     final public Board board;
-
+/**
+ * @author Oskar Lolk Larsen s215717
+ */
     private String name;
     private String color;
     private int checkpoints = 0;

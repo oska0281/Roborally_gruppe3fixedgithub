@@ -97,8 +97,7 @@ public class PlayerView extends Tab implements ViewObserver {
         executeButton.setOnAction( e-> gameController.executePrograms());
 
         stepButton = new Button("Execute Current Register");
-        stepButton.setOnAction( e-> {
-            gameController.executeStep();
+        stepButton.setOnAction( e-> {gameController.executeStep();
         });
 
         buttonPanel = new VBox(finishButton, executeButton, stepButton);
@@ -201,7 +200,9 @@ public class PlayerView extends Tab implements ViewObserver {
                 playerInteractionPanel.getChildren().clear();
 
                 if (player.board.getCurrentPlayer() == player) {
-
+/**
+ * @author Peter Møller s215707
+ */
 
                     CommandCardField field = player.getProgramField(player.board.getStep());
                     if (field !=null){
