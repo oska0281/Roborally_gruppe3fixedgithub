@@ -5,7 +5,7 @@ import dk.dtu.compute.se.pisd.roborally.model.Player;
 import dk.dtu.compute.se.pisd.roborally.model.Space;
 import org.jetbrains.annotations.NotNull;
 
-/**Ahmed Nassaralha s215702
+/** @author Ahmed Nassaralha s215702
  *
  */
 public class ConveyorBelt extends FieldAction{
@@ -14,7 +14,10 @@ public class ConveyorBelt extends FieldAction{
     public ConveyorBelt(Heading heading) {
         this.heading = heading;
     }
-
+    /**
+     * This method checks if any players is located on space and neighbour space.
+     * If both spaces free it will move player to neighbour
+     */
     @Override
     public boolean landedOn(@NotNull GameController gameController, @NotNull Space space) {
         if(space != null){

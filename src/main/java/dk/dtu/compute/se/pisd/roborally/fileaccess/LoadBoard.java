@@ -48,6 +48,7 @@ import java.util.stream.Stream;
 public class LoadBoard {
     /**
      * @author Ahmed Nassaralha s215702
+     * Board names and width x height
      */
     private static final String BOARDSFOLDER = "boards";
     private static final String DEFAULTBOARD = "defaultboard";
