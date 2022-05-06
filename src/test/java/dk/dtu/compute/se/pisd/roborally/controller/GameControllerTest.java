@@ -105,7 +105,7 @@ class GameControllerTest {
     /**
      @author Oskar Lolk Larsen s215717
      turnRight test
-     mod vest, da start pos er SOUTH
+     against west, because start pos is SOUTH
      */
     @Test
     void turnRight(){
@@ -118,7 +118,7 @@ class GameControllerTest {
     /**
      @author Oskar Lolk Larsen s215717
      turnLeft test
-     mod east ~~~
+     against east ~~~
      */
     @Test
     void turnLeft() {
