@@ -34,8 +34,9 @@ class WallTest{
     }
 
     /**
-     * @author Christoffer Fink s205449
      * Testing to see if the player doesn't move through the wall
+     * @author Christoffer Fink s205449
+     *
      */
     @Test
     void wall() {

@@ -72,8 +72,8 @@ public class Space extends Subject {
     }
 
     /**
-     * @author Christoffer Fink s205449
      * This method adds walls as field action
+     * @author Christoffer Fink s205449
      * @return
      */
         public List<Heading> getWalls() {

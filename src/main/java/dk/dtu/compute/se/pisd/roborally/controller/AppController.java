@@ -194,6 +194,7 @@ public class AppController implements Observer {
     }
 
     /**
+     * Does so player can win
      * @author Christoffer Fink s205449
      * @param subject the subject which changed
      */

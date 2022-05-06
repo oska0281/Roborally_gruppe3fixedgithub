@@ -35,8 +35,9 @@ class GameControllerTest {
     }
 
     /**
-    @author Christoffer Fink s205449
-     Testing if player moves forward when supposed to
+     * Testing if player moves forward when supposed to
+   * @author Christoffer Fink s205449
+    * Testing if player moves forward when supposed to
      */
     @Test
     void moveForward() {
@@ -53,8 +54,8 @@ class GameControllerTest {
                 "Space (0,0) should be empty!");
     }
     /**
-     @author Christoffer Fink s205449
-     Same as moveForward test just checking if twice
+     * Same as moveForward test just checking if twice
+    * @author Christoffer Fink s205449
      */
     @Test
     void fastForward() {
@@ -72,9 +73,9 @@ class GameControllerTest {
                 "Space (0,0) should be empty!");
     }
     /**
-     @author Oskar Lolk Larsen s215717
-     turnRight test
-     against west, because start pos is SOUTH
+     *@author Oskar Lolk Larsen s215717
+    * turnRight test
+     *against west, because start pos is SOUTH
      */
     @Test
     void turnRight(){
@@ -85,9 +86,9 @@ class GameControllerTest {
     }
 
     /**
-     @author Oskar Lolk Larsen s215717
-     turnLeft test
-     against east ~~~
+     *  turnLeft test
+     *  against east ~~~
+    * @author Oskar Lolk Larsen s215717
      */
     @Test
     void turnLeft() {
@@ -99,8 +100,9 @@ class GameControllerTest {
     }
 
     /**
-     * @author Christoffer Fink s205449
      * Testing if the player makes an uturn when supposed to
+     * @author Christoffer Fink s205449
+     *
      */
     @Test
     void uTurn() {
