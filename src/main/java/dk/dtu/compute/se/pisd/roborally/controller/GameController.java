@@ -197,7 +197,7 @@ public class GameController {
 
     /**
      *
-     * @David Otzen s201386
+     * @author David Otzen s201386
      */
     public void executeCommandOptionAndContinue(@NotNull Command option){
         Player currentPlayer = board.getCurrentPlayer();
