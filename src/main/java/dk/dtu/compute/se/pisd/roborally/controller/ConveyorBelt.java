@@ -14,9 +14,14 @@ public class ConveyorBelt extends FieldAction{
     public ConveyorBelt(Heading heading) {
         this.heading = heading;
     }
+
     /**
-     * This method checks if any players is located on space and neighbour space.
-     * If both spaces free it will move player to neighbour
+     * /**
+     *This method checks if any players is located on space and neighbour space.
+     *If both spaces free it will move player to neighbour
+     * @param gameController
+     * @param space
+     * @return
      */
     @Override
     public boolean landedOn(@NotNull GameController gameController, @NotNull Space space) {

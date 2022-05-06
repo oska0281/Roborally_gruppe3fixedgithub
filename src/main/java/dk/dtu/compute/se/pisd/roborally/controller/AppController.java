@@ -164,7 +164,8 @@ public class AppController implements Observer {
         }
         return false;
     }
-//
+
+
     public void exit() {
         if (gameController != null) {
             Alert alert = new Alert(AlertType.CONFIRMATION);
@@ -184,13 +185,17 @@ public class AppController implements Observer {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean isGameRunning() {
         return gameController != null;
     }
 
     /**
-     *
      * @author Christoffer Fink s205449
+     * @param subject the subject which changed
      */
     @Override
     public void update(Subject subject) {

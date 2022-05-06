@@ -105,9 +105,6 @@ class Repository implements IRepository {
 				// statement.close();
 
 				createPlayersInDB(game);
-				/* TOODO this method needs to be implemented first
-				createCardFieldsInDB(game);
-				 */
 
 				// since current player is a foreign key, it can oly be
 				// inserted after the players are created, since MySQL does
@@ -343,8 +340,15 @@ class Repository implements IRepository {
 		}
 		rs.close();
 	}
+
 	/**
+	 *
 	 * @author David Otzen s201386
+	 *
+	 * @param board
+	 * @param player
+	 * @param number
+	 * @throws SQLException
 	 */
 	private void loadCommandCardsForOnePlayer(Board board, Player player, int number) throws SQLException{
 		PreparedStatement ps = getSelectCardsStatementU();
@@ -385,8 +389,13 @@ class Repository implements IRepository {
 		rs.close();
 
 	}
+
 	/**
 	 * @author David Otzen s201386
+	 * @param board
+	 * @param player
+	 * @param number
+	 * @throws SQLException
 	 */
 	private void updateCardsForEachPlayerInDB(Board board, Player player, int number) throws SQLException{
 		PreparedStatement ps = getSelectCardsStatementU();
@@ -509,6 +518,7 @@ class Repository implements IRepository {
 		}
 		return select_games_stmt;
 	}
+
 	/**
 	 * @author David Otzen s201386
 	 */

@@ -196,7 +196,6 @@ public class Board extends Subject {
      */
 
     /**@author Christoffer Fink s205449
-     *
      * @param space
      * @param heading
      * @return
@@ -244,12 +243,6 @@ public class Board extends Subject {
     }
 
     public String getStatusMessage() {
-        // this is actually a view aspect, but for making assignment V1 easy for
-        // the students, this method gives a string representation of the current
-        // status of the game
-
-        // XXX: V1 add the move count to the status message
-        // XXX: V2 changed the status so that it shows the phase, the current player and the number of steps
         return "Phase: " + getPhase().name() +
                 ", Player = " + getCurrentPlayer().getName()+
                 ", Counter " + counter;
