@@ -198,12 +198,11 @@ public class PlayerView extends Tab implements ViewObserver {
                     programPane.add(playerInteractionPanel, Player.NO_REGISTERS, 0);
                 }
                 playerInteractionPanel.getChildren().clear();
-
-                if (player.board.getCurrentPlayer() == player) {
 /**
  * @author Peter Møller s215707
  */
 
+                if (player.board.getCurrentPlayer() == player) {
                     CommandCardField field = player.getProgramField(player.board.getStep());
                     if (field !=null){
                         CommandCard card = field.getCard();

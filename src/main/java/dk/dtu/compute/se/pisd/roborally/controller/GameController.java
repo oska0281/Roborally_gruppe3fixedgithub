@@ -416,16 +416,21 @@ public class GameController {
             player.setHeading(player.getHeading().prev());
         }
     }
-    /**@author Peter Møller s215707
-     * */
+    /**
+     * Turns the player around
+     * @param player
+     * @author Peter Møller s215707
+     */
     public void uTurn(@NotNull Player player) {
         if(player !=null && player.board == board){
             player.setHeading(player.getHeading().next().next());
         }
     }
-
-    /**@author Peter Møller s215707
-     * */
+    /**
+     * Moves the player backwards
+     * @param player
+     * @author Peter Møller s215707
+     */
     public void backUp(@NotNull Player player) {
         if(player !=null && player.board == board){
             uTurn(player);
@@ -433,10 +438,10 @@ public class GameController {
             uTurn(player);
         }
     }
-
-
-    /**@author Peter Møller s215707
+    /**
      * Just as in fastForward, but here the moveForward is used one more time to get fasterForward
+     * @param player
+     * @author Peter Møller s215707
      */
     public void fasterForward(@NotNull Player player) {
         moveForward(player);
