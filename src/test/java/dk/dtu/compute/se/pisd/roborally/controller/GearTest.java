@@ -14,10 +14,6 @@ class GearTest {
 
     private GameController gameController;
 
-    /**
-     * @author Christoffer Fink 205449
-     * samme fra GameControllertest for at sætte board op og fjerne det hver gang
-     */
     @BeforeEach
     void setUp() {
         Board board = new Board(TEST_WIDTH, TEST_HEIGHT);
@@ -31,17 +27,13 @@ class GearTest {
         board.setCurrentPlayer(board.getPlayer(0));
     }
 
-    /**
-     * @author Christoffer Fink s205499
-     * ~~
-     */
     @AfterEach
     void tearDown() {
         gameController = null;
     }
     /**
      * @author Christoffer Fink s205499
-     * samme som moveforward i princippet med en varriation om man lander på et gear
+     * same as move forward but landing on gear turning left
      */
     @Test
     void moveForwardLeftGear() {
@@ -57,6 +49,7 @@ class GearTest {
 
     /**
      * @author Christoffer Fink 205449
+     * same as before just right turn
      */
     @Test
     void moveForwardRightGear() {

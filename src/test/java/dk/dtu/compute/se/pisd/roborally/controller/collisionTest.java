@@ -34,23 +34,24 @@ class collisionTest {
     void tearDown() {
         gameController = null;
     }
-
-/**
- * @author Christoffer Fink s205449
- * IGANGVÆRENDE COLLISION TEST
- */
-
-//@Test
-    //void collision(){
-    //Board board = gameController.board;
-    //Player current = board.getCurrentPlayer();
-    //board.getSpace(0,1).getPlayer();
-    //gameController.moveForward(current);   - SPILLER 1
-    //gameController.moveForward(current);   - SPILLER 2
-    //Assertions.assertEquals(current, board.getSpace(0, 1).getPlayer(), "Player " + current.getName() + " should beSpace (0,1)!"); - SPILLER 1
-    //Assertions.assertEquals(current, board.getSpace(0, 2).getPlayer(), "Player " + current.getName() + " should beSpace (0,2)!"); - SPILLER 2
-
 }
+    /**
+     * @author Christoffer Fink s205449
+     * IGANGVÆRENDE COLLISION TEST
+     */
+/**
+    @Test
+    void collision() {
+        Board board = gameController.board;
+        Player player1 = board.getPlayer(0);
+        Player player2 = board.getPlayer(1);
+        board.getSpace(0, 0).getPlayer();
+        gameController.moveForward(player1);
+        gameController.moveForward(player2);
+        Assertions.assertEquals(player1, board.getSpace(0, 1).getPlayer(), "Player " + player1.getName() + " should beSpace (0,1)!");
+        Assertions.assertEquals(player2, board.getSpace(0, 2).getPlayer(), "Player " + player2.getName() + " should beSpace (0,2)!");
+
+    }
 
 
 
