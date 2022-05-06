@@ -73,6 +73,7 @@ public class Space extends Subject {
 
     /**
      * @author Christoffer Fink s205449
+     * This method adds walls
      * @return
      */
         public List<Heading> getWalls() {

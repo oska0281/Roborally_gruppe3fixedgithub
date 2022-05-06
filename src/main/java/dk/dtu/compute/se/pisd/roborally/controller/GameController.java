@@ -367,7 +367,7 @@ public class GameController {
         }
         /**
          * @author Christoffer Fink 205449'
-         * allowed to walk where there isnt wall
+         * Does so the player can't wall through the walls
          */
         if(player.getSpace() != null){
            if(player.getSpace().getWalls() != null){
