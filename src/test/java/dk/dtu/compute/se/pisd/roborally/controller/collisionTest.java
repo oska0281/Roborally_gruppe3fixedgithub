@@ -34,7 +34,7 @@ class collisionTest {
     void tearDown() {
         gameController = null;
     }
-}
+
     /**
      * Check if players move each other when bumping into each other
      * @author Christoffer Fink s205449
@@ -46,12 +46,13 @@ class collisionTest {
         Board board = gameController.board;
         Player player1 = board.getPlayer(0);
         Player player2 = board.getPlayer(1);
-        board.getSpace(0, 0).getPlayer();
+        board.getSpace(0, 0).setPlayer(player1);
+        board.getSpace(0, 1).setPlayer(player2);
         gameController.moveForward(player1);
-        gameController.moveForward(player2);
         Assertions.assertEquals(player1, board.getSpace(0, 1).getPlayer(), "Player " + player1.getName() + " should beSpace (0,1)!");
         Assertions.assertEquals(player2, board.getSpace(0, 2).getPlayer(), "Player " + player2.getName() + " should beSpace (0,2)!");
 
-    }}
+    }
+}
 
 
