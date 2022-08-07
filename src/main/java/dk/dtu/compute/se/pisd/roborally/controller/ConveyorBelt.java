@@ -29,7 +29,6 @@ public class ConveyorBelt extends FieldAction{
             Player player  = space.getPlayer();
             Space neighbour = gameController.board.getNeighbour(space, heading);
             if(player != null && neighbour != null){
-                player.setHeading(heading);
                 try {
                     gameController.movePlayerToSpace(player, neighbour, heading);
                 }catch (GameController.moveNotPossibleException e){
