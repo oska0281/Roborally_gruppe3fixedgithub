@@ -22,10 +22,7 @@
 package dk.dtu.compute.se.pisd.roborally.view;
 
 import dk.dtu.compute.se.pisd.designpatterns.observer.Subject;
-import dk.dtu.compute.se.pisd.roborally.controller.Checkpoint;
-import dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt;
-import dk.dtu.compute.se.pisd.roborally.controller.FieldAction;
-import dk.dtu.compute.se.pisd.roborally.controller.Gear;
+import dk.dtu.compute.se.pisd.roborally.controller.*;
 import dk.dtu.compute.se.pisd.roborally.model.Heading;
 import dk.dtu.compute.se.pisd.roborally.model.Player;
 import dk.dtu.compute.se.pisd.roborally.model.Space;
@@ -172,7 +169,18 @@ public class SpaceView extends StackPane implements ViewObserver {
                         direction.setY(SPACE_HEIGHT/2.0);
 
                         pane.getChildren().addAll(first,second, direction);
+                    } else if(fieldAction.getClass() == ConveyorDouble.class){
+                    Polygon polygon = new Polygon(5.0, 5.0,
+                            20.0, 30.0,
+                            35.0, 5.0 );
+                    polygon.setFill(Color.ORANGE);
+                    switch (((ConveyorDouble) fieldAction).getHeading()){
+                        case WEST -> polygon.setRotate(90);
+                        case NORTH -> polygon.setRotate(180);
+                        case EAST -> polygon.setRotate(-90);
                     }
+                    pane.getChildren().add(polygon);
+                }
                 }
             }
 
@@ -188,4 +196,5 @@ public class SpaceView extends StackPane implements ViewObserver {
         pane.getChildren().add(rectangle);
         return pane;
     }
+
 }
