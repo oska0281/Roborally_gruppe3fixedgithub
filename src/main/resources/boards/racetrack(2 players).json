@@ -171,7 +171,7 @@
     {
       "actions": [
         {
-          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.controller.ConveyorBelt",
+          "CLASSNAME": "dk.dtu.compute.se.pisd.roborally.controller.ConveyorDouble",
           "INSTANCE": {
             "heading": "NORTH"
           }
